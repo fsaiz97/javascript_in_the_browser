@@ -1,4 +1,4 @@
-# JavaScript in the Browser_(120 mins)_
+# JavaScript in the Browser _(120 mins)_
 
 ## Objectives
 _These objectives are crafted using [Bloom's Taxonomy](https://tips.uark.edu/using-blooms-taxonomy/) \
@@ -149,7 +149,9 @@ describe('easter eggs', () => {
     })
 })
 ```
+---
 
+## Break _(5 mins)_
 ---
 
 ## Updating and Adding Content _(10 mins)_
@@ -174,7 +176,7 @@ describe('easter eggs', () => {
 
 ---
 
-## Updating and Adding CSS _(topic timing eg. 10 mins)_
+## Updating and Adding CSS _(10 mins)_
 
 **The style object** _(section timing eg. 10 mins)_
 - [ ] :speaking_head: Tell students that elements have a `style` property that points to an object
@@ -184,7 +186,7 @@ describe('easter eggs', () => {
 
 ---
 
-## Using External Libraries _(topic timing eg. 10 mins)_
+## Using External Libraries _(10 mins)_
 
 **CDN** 
 - [ ] :speaking_head: Tell students that we can bring in external libraries via a CDN eg. [GSAP CDN](https://cdnjs.com/libraries/gsap)
