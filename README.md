@@ -26,10 +26,10 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :computer: Create a new JS file with the console.log and bring it in with a script tag in the head, show how it runs
 
 **defer Tag & other options***
-- [ ] :computer: Add `let heading = document.querySelector('#heading')` to your JavaScript and reload, noting the console error
+- [ ] :computer: Add `document.querySelector('#heading').textContent = "Welcome"` to your JavaScript and reload, noting the console error
 - [ ] :speaking_head: Tell students that often our JS files reference elements in the DOM so we need to make sure that the DOM is loaded before it tries to access it
 - [ ] :speaking_head: Tell students there are 3 ways we can acheive this
-- [ ] :computer: Move the script tag to the bottom of the `body` and ask students why they think this might work
+- [ ] :computer: Move the script tag to be below the h1 in `index.html` and ask students why they think this might work
 - [ ] :computer: Move the script tag back to the top and add the `defer` script and explain what it is doing, show it work
 - [ ] :exclamation: Advise students that we will come back to the other option a bit later but `defer` is the latest and preferred approach
 
@@ -37,7 +37,7 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 
 ## Selecting Elements _(10 mins)_
 
-**Selectors** _(section timing eg. 10 mins)_
+**Selectors**
 - [ ] :grey_question: Point out the `querySelector` and ask students what this is doing and what it is returning
 - [ ] :grey_question: Ask students how they think we could use `querySelector` by tag, class, etc.
 - [ ] :computer: Show students a `querySelectorAll` and explain the usage and return type _(NodeList)_
@@ -49,13 +49,13 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 
 ## Testing in the DOM _(20 mins)_
 
-**Blockers** _(section timing eg. 10 mins)_
+**Blockers**
 - [ ] :speaking_head: Tell students that testing the DOM is considered notoriously tricky
 - [ ] :speaking_head: Tell students that the issue lies in that our tests don't usually run in the browser so don't have access to the `document`
 - [ ] :speaking_head: Tell students we need to overcome this with some tool which can create a simulation of the DOM with which we can interact during our tests
 - [ ] :speeaking_head: Tell students that there are various options and Jest has some great tools to get us started so we will setup as we have done before
 
-**Setup** _(section timing eg. 10 mins)_
+**Setup** 
 - [ ] :computer: `npm init -y`, `npm install -D jest`, update `package.json` scripts to `"test": "jest --watchAll"`
 - [ ] :computer: Create a `test` folder and add a `layout.spec.js` file with a `describe` block
 - [ ] :exclamation: Students should be comfortable with this flow but if questions arise, address them as appropriate
@@ -63,10 +63,10 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :speaking_head: Tell students that we often will need just a small piece of HTML eg. `document.documentElement.innerHTML = '<ul id="food-list"></ul>'`
 - [ ] :speaking_head: Tell students that we can also bring in entire HTML files if we need but we will need a bit of extra help
 - [ ] :computer: Add the code below to the layout test file and go through it line by line
-- [ ] :grey_question: Ask students when they think `before` runs  _(before the test suite runs)_
-- [ ] :exclamation: Advise students that `beforeEach` is another useful Jest hook that will run before each test - we will use it soon
+- [ ] :grey_question: Ask students when they think `beforeEach` runs
+- [ ] :exclamation: Advise students that `beforeEach` is a useful Jest hook that will run before each test
 - [ ] :computer: Nest `describe` blocks for 'head' and 'body' and ask students what we could check for
-- [ ] :computer: Have students navigate you writing some tests for eg. 'has a title', 'has a heading', 'has an "add item" button, 'has a button to switch modes' _(see completed brach for inspiration)_
+- [ ] :computer: Have students navigate you writing some tests for eg. 'has a title', 'has a heading', 'has an "add item" button, 'has a button to switch modes' _(see completed branch for inspiration)_
 - [ ] :computer: Run the test suite and get all the layout tests passing
 - [ ] :exclamation: Tell students that we will come back and add more tests soon, when we have a better idea of what we want to do
 
@@ -140,10 +140,10 @@ describe('easter eggs', () => {
     test('an image with is added to the DOM when the Konami code is correctly entered', () => {
         const correctKonami = [
             'ArrowUp', 'ArrowDown', 'ArrowUp', 'ArrowDown', 
-            'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight'
+            'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
             'A', 'B'
         ]
-        correctKonami.forEach(k => easterEggs.konami({ target: { key: k }}))
+        correctKonami.forEach(k => easterEggs.konami({ key: k }))
         
         expect(header.textContent).toContain('You cracked the code!');
     })
@@ -178,7 +178,7 @@ describe('easter eggs', () => {
 
 ## Updating and Adding CSS _(10 mins)_
 
-**The style object** _(section timing eg. 10 mins)_
+**The style object** 
 - [ ] :speaking_head: Tell students that elements have a `style` property that points to an object
 - [ ] :computer: Log an element and look at the `style` object (set some inline CSS if needed)
 - [ ] :computer: Select the element and add a property to the `style` object eg. `el.style.color = 'red'`
@@ -191,7 +191,7 @@ describe('easter eggs', () => {
 **CDN** 
 - [ ] :speaking_head: Tell students that we can bring in external libraries via a CDN eg. [GSAP CDN](https://cdnjs.com/libraries/gsap)
 - [ ] :computer: Bring in GSAP, referencing the [Getting Started docs](https://greensock.com/get-started/#loading-gsap)
-- [ ] :computer: Add `gsap.to("#heading", {duration: 1, x: 100});` somewhere appropriate
+- [ ] :computer: Add `header.addEventListener('mouseover', () => gsap.to("#heading", {duration: 1, x: 100, opacity: 0.1}));` somewhere appropriate
 
 **Install & Bundle**
 - [ ] :speaking_head: Tell students that we can also install packages as dependencies as we did with jest but this would mean we would need to 'build' our app using a module bundler
