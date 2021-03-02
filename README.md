@@ -16,7 +16,6 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 
 ---
 
-
 ## Loading Your JavaScript _(10 mins)_
 
 **Script Tag**
@@ -32,6 +31,27 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :computer: Move the script tag to be below the h1 in `index.html` and ask students why they think this might work
 - [ ] :computer: Move the script tag back to the top and add the `defer` script and explain what it is doing, show it work
 - [ ] :exclamation: Advise students that we will come back to the other option a bit later but `defer` is the latest and preferred approach
+
+---
+
+## Adding Some Dev Tools
+- [ ] :speaking_head: Tell students that so far we've been adding extra script tags for each of our additional JS files
+- [ ] :speaking_head: Tell students this is partly because `require` is not available in the browser!
+- [ ] :computer: Show students what happens if we try to require in our js file
+- [ ] :speaking_head: Tell students that this could get a bit cumbersome but also that our files would need to be treated differently in test
+- [ ] :exclamation: Have students recall that we used `module.exports` to expose our functions to our test suites and other local files in node
+- [ ] :speaking_head: Tell students that we will want to test this code too
+- [ ] :computer: Add a `module.exports = something` and note the error in dev tools
+- [ ] :computer: Show students how we can wrap this in a try catch but point out this could also get a bit cumbersome
+- [ ] :exclamation: Tell students that we can resolve this with a module bundler
+- [ ] :speaking_head: Tell students that in a few weeks we will use a complex bundler called Webpack
+- [ ] :speaking_head: Tell students that our needs right now can be met with something a bit simpler
+- [ ] :computer: Show students the `watchify` npm page and note the reference to `browserify`
+- [ ] :exclamation: Tell students about the `browserify` wiki page
+- [ ] :speaking_head: Tell students that for now we will just set up a dev script
+- [ ] :speaking_head: Tell students it would be great to be able to run `npm run dev` and get a server starting and a constantly updating bundle of JS
+- [ ] :computer: Show students the simple dev server wiki guide and follow it to set up your dev script
+- [ ] :computer: Show students how the changes are reflected without manually rebundling and the module errors are gone
 
 ---
 
@@ -194,10 +214,10 @@ describe('easter eggs', () => {
 - [ ] :computer: Add `header.addEventListener('mouseover', () => gsap.to("#heading", {duration: 1, x: 100, opacity: 0.1}));` somewhere appropriate
 
 **Install & Bundle**
-- [ ] :speaking_head: Tell students that we can also install packages as dependencies as we did with jest but this would mean we would need to 'build' our app using a module bundler
-- [ ] :exclamation: Advise students that we will be using a module bundler called Webpack later in the course
+- [ ] :speaking_head: Tell students that we can also install packages as dependencies as we did with jest but this enforce the need to 'build' our app using a module bundler
+- [ ] :exclamation: Remind students that we will be using a module bundler called Webpack later in the course
 - [ ] :exclamation: Tell students that if they are just using a couple of libs, a CDN probably works out a bit better as the user may even have it cached if they've visited another website
-- [ ] :exclamation: Tell students that if they really want to use a module bundle already, to check out the [fp wiki docs](https://github.com/getfutureproof/fp_guides_wiki/wiki/Browserify) on browserify
+- [ ] :exclamation: Tell students that using `browserify` is much the same as using `watchify` as we have done today so to check out the wiki guide and official docs to have a go at implementing it for production
 
 ---
 
