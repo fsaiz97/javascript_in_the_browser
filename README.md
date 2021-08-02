@@ -73,7 +73,7 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :speaking_head: Tell students that testing the DOM is considered notoriously tricky
 - [ ] :speaking_head: Tell students that the issue lies in that our tests don't usually run in the browser so don't have access to the `document`
 - [ ] :speaking_head: Tell students we need to overcome this with some tool which can create a simulation of the DOM with which we can interact during our tests
-- [ ] :speeaking_head: Tell students that there are various options and Jest has some great tools to get us started so we will setup as we have done before
+- [ ] :speaking_head: Tell students that there are various options and Jest has some great tools to get us started so we will setup as we have done before
 
 **Setup** 
 - [ ] :computer: `npm init -y`, `npm install -D jest`, update `package.json` scripts to `"test": "jest --watchAll"`
