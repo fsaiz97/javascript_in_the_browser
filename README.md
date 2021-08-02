@@ -50,7 +50,7 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :exclamation: Tell students about the `browserify` wiki page
 - [ ] :speaking_head: Tell students that for now we will just set up a dev script
 - [ ] :speaking_head: Tell students it would be great to be able to run `npm run dev` and get a server starting and a constantly updating bundle of JS
-- [ ] :computer: Show students the simple dev server wiki guide and follow it to set up your dev script
+- [ ] :computer: Show students the simple dev server wiki guide (https://github.com/getfutureproof/fp_guides_wiki/wiki/Simple-Client-Side-Dev-Server) and follow it to set up your dev script
 - [ ] :computer: Show students how the changes are reflected without manually rebundling and the module errors are gone
 
 ---
