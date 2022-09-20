@@ -6,9 +6,19 @@
 // const path = require('path');
 // const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8')
 
+const renderDom = require('./helpers')
+
+let dom;
+let document;
+
 describe('index.html', () => {
-    beforeEach(() => {
-        document.documentElement.innerHTML = html.toString();
+    // beforeEach(() => {
+    //     document.documentElement.innerHTML = html.toString();
+    // })
+
+    beforeEach(async () => {
+        dom = await renderDom('index.html')
+        document = await dom.window.document;
     })
 
     test("body has a heading", () => {
