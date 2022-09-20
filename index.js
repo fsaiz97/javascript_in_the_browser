@@ -1,5 +1,8 @@
 let addButton = document.getElementById('add-item');
 let groceriesList = document.getElementById('food-list');
+let heading = document.getElementById("heading");
+
+heading.style.backgroundColor = "green";
 
 // addButton.onclick = () => console.log("Click")
 // addButton.addEventListener('click', () => console.log("Click"));
@@ -20,15 +23,10 @@ addButton.addEventListener("click", () => {
     listSpan.className = "delete-btn";
     listSpan.textContent = 'x';
     groceriesList.append(newItem);
-    listItem.append(listSpan);
+    newItem.append(listSpan);
 })
 
-let heading = document.getElementById("heading");
-heading.addEventListener("mouseenter", () => {
-    heading.style.backgroundColor = "red";
-})
+heading.addEventListener("mouseenter", () => heading.style.backgroundColor = "red")
 
-heading.addEventListener("mouseleave", () => {
-    heading.style.backgroundColor = "green";
-})
+heading.addEventListener("mouseleave", () => heading.style.backgroundColor = "green")
 

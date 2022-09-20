@@ -28,7 +28,7 @@ describe('index.html', () => {
     })
 
     test("body has an add button", () => {
-        let addButton = document.getElementById('add-item');
+        const addButton = document.getElementById('add-item');
         expect(addButton).toBeTruthy();
         expect(addButton.innerHTML).toBe('Add Item');
     })
@@ -48,5 +48,19 @@ describe('index.html', () => {
         // Expect
         expect(item1.textContent).toBe("Task 1 is performed")
         expect(item2.textContent).toBe("Task 2 is performed")
+    })
+
+    test("header background changes colour when mouse is hovering over it", () => {
+        const heading = document.getElementById('heading');
+
+        expect(heading.style.backgroundColor).toBe('green');
+
+        heading.dispatchEvent(new dom.window.Event('mouseenter'));
+
+        expect(heading.style.backgroundColor).toBe('red');
+
+        heading.dispatchEvent(new dom.window.Event('mouseleave'));
+
+        expect(heading.style.backgroundColor).toBe('green');
     })
 })
