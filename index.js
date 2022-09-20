@@ -4,13 +4,13 @@ let groceriesList = document.getElementById('food-list');
 // addButton.onclick = () => console.log("Click")
 // addButton.addEventListener('click', () => console.log("Click"));
 
-// addButton.addEventListener("click", () => {
-//     document.getElementById('item-1').textContent = "Task 1";
-// })
+addButton.addEventListener("click", () => {
+    document.getElementById('item-1').textContent = "Task 1 is performed";
+})
 
-// addButton.addEventListener("click", () => {
-//     document.getElementById('item-2').textContent = "Task 2";
-// })
+addButton.addEventListener("click", () => {
+    document.getElementById('item-2').textContent = "Task 2 is performed";
+})
 
 addButton.addEventListener("click", () => {
     let newItem = document.createElement("li");
