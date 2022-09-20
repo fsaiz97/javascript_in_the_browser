@@ -22,6 +22,10 @@ main {
     height: 85vh;
 }
 
+#heading {
+  background-color: green;
+}
+
 button {
     background-color: white;
     color: var(--fp-accent-plum);
