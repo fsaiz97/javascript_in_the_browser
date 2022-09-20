@@ -203,5 +203,10 @@
   "bugs": {
     "url": "https://github.com/fsaiz97/javascript_in_the_browser/issues"
   },
-  "homepage": "https://github.com/fsaiz97/javascript_in_the_browser#readme"
+  "homepage": "https://github.com/fsaiz97/javascript_in_the_browser#readme",
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
+    "jsdom": "^20.0.0"
+  }
 }
